@@ -1,5 +1,10 @@
 # 
 
+# Event Storming Model
+![image](https://github.com/dalssong/abcdelivery/assets/126850101/cc065302-d4d6-431b-8825-62d72f4909cc)
+
+
+
 ## Model
 www.msaez.io/#/storming/abcdelivery-jsyang
 
