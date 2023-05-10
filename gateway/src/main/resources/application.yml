@@ -1,0 +1,98 @@
+server:
+  port: 8088
+
+---
+
+spring:
+  profiles: default
+  cloud:
+    gateway:
+      routes:
+        - id: store
+          uri: http://localhost:8081
+          predicates:
+            - Path=/cookings/**, 
+        - id: order
+          uri: http://localhost:8082
+          predicates:
+            - Path=/orders/**, 
+        - id: delivery
+          uri: http://localhost:8083
+          predicates:
+            - Path=/deliveries/**, 
+        - id: front-user
+          uri: http://localhost:8084
+          predicates:
+            - Path=, 
+        - id: front-rider
+          uri: http://localhost:8085
+          predicates:
+            - Path=, 
+        - id: front-store
+          uri: http://localhost:8086
+          predicates:
+            - Path=, 
+        - id: frontend
+          uri: http://localhost:8080
+          predicates:
+            - Path=/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+
+---
+
+spring:
+  profiles: docker
+  cloud:
+    gateway:
+      routes:
+        - id: store
+          uri: http://store:8080
+          predicates:
+            - Path=/cookings/**, 
+        - id: order
+          uri: http://order:8080
+          predicates:
+            - Path=/orders/**, 
+        - id: delivery
+          uri: http://delivery:8080
+          predicates:
+            - Path=/deliveries/**, 
+        - id: front-user
+          uri: http://frontUser:8080
+          predicates:
+            - Path=, 
+        - id: front-rider
+          uri: http://frontRider:8080
+          predicates:
+            - Path=, 
+        - id: front-store
+          uri: http://frontStore:8080
+          predicates:
+            - Path=, 
+        - id: frontend
+          uri: http://frontend:8080
+          predicates:
+            - Path=/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+server:
+  port: 8080
