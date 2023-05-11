@@ -8,7 +8,24 @@
 
 # 3.CQRS
 ```
-![image](https://github.com/dalssong/abcdelivery/assets/126850101/5d1b644e-6ab3-490b-a5c7-d56051893f7f)
+Hibernate: 
+    select
+        order0_.id as id1_1_0_,
+        order0_.menu_name as menu_nam2_1_0_,
+        order0_.menu_price as menu_pri3_1_0_,
+        order0_.order_status as order_st4_1_0_,
+        order0_.store_name as store_na5_1_0_,
+        order0_.user_id as user_id6_1_0_ 
+    from
+        order_table order0_ 
+    where
+        order0_.id=?
+2023-05-11 07:45:25.456 TRACE [order,0c665a666488c307,0c665a666488c307,true] 16933 --- [nio-8082-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2023-05-11 07:45:25.456 TRACE [order,0c665a666488c307,0c665a666488c307,true] 16933 --- [nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([menu_nam2_1_0_] : [VARCHAR]) - [menu1]
+2023-05-11 07:45:25.456 TRACE [order,0c665a666488c307,0c665a666488c307,true] 16933 --- [nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([menu_pri3_1_0_] : [INTEGER]) - [10000]
+2023-05-11 07:45:25.456 TRACE [order,0c665a666488c307,0c665a666488c307,true] 16933 --- [nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([order_st4_1_0_] : [VARCHAR]) - [orderStatus:paid]
+2023-05-11 07:45:25.456 TRACE [order,0c665a666488c307,0c665a666488c307,true] 16933 --- [nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([store_na5_1_0_] : [VARCHAR]) - [K-Foods]
+2023-05-11 07:45:25.456 TRACE [order,0c665a666488c307,0c665a666488c307,true] 16933 --- [nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([user_id6_1_0_] : [BIGINT]) - [1234]
 ```
 
 # 4.Compensation/Correlation
