@@ -29,11 +29,11 @@ public class Order {
 
     @PostPersist
     public void onPostPersist() {
-        OrderPlaced orderPlaced = new OrderPlaced(this);
-        orderPlaced.publishAfterCommit();
+        // OrderPlaced orderPlaced = new OrderPlaced(this);
+        // orderPlaced.publishAfterCommit();
 
-        OrderCancelled orderCancelled = new OrderCancelled(this);
-        orderCancelled.publishAfterCommit();
+        // OrderCancelled orderCancelled = new OrderCancelled(this);
+        // orderCancelled.publishAfterCommit();
     }
 
     public static OrderRepository repository() {
@@ -74,7 +74,7 @@ public class Order {
         
         repository().findById(foodDelivered.getOrderId()).ifPresent(order->{
             
-            order // do something
+            order.setOrderStatus("Delivery finished. Enjoy meal!"); // do something
             repository().save(order);
 
 
@@ -130,16 +130,19 @@ public class Order {
 
         */
 
-        /** Example 2:  finding and process
+        /** Example 2:  finding and process */
         
-        repository().findById(deliveryStarted.get???()).ifPresent(order->{
+        repository().findById(deliveryStarted.getOrderId()).ifPresent(order->{
             
-            order // do something
+            order.setOrderStatus("Delivery started. Please wait minitues!"); // do something
             repository().save(order);
 
+            OrderPlaced orderPlaced = new OrderPlaced();
+            orderPlaced.setId(order.getId());
+            orderPlaced.setOrderStatus("Order accepted.");
+            orderPlaced.publishAfterCommit();
 
          });
-        */
 
     }
 
@@ -150,16 +153,15 @@ public class Order {
 
         */
 
-        /** Example 2:  finding and process
+        /** Example 2:  finding and process */
         
-        repository().findById(cookStarted.get???()).ifPresent(order->{
+        repository().findById(cookStarted.getOrderId()).ifPresent(order->{
             
-            order // do something
+            order.setOrderStatus("Cooking started."); // do something
             repository().save(order);
 
 
          });
-        */
 
     }
 
@@ -170,16 +172,14 @@ public class Order {
 
         */
 
-        /** Example 2:  finding and process
+        /** Example 2:  finding and process */
         
-        repository().findById(cookFinished.get???()).ifPresent(order->{
+        repository().findById(cookFinished.getOrderId()).ifPresent(order->{
             
-            order // do something
+            order.setOrderStatus("Cooking finished."); // do something
             repository().save(order);
 
-
          });
-        */
 
     }
 }

@@ -36,14 +36,14 @@ public class Delivery {
 
     @PostPersist
     public void onPostPersist() {
-        FoodPicked foodPicked = new FoodPicked(this);
-        foodPicked.publishAfterCommit();
+        // FoodPicked foodPicked = new FoodPicked(this);
+        // foodPicked.publishAfterCommit();
 
-        FoodDelivered foodDelivered = new FoodDelivered(this);
-        foodDelivered.publishAfterCommit();
+        // FoodDelivered foodDelivered = new FoodDelivered(this);
+        // foodDelivered.publishAfterCommit();
 
-        DeliveryStarted deliveryStarted = new DeliveryStarted(this);
-        deliveryStarted.publishAfterCommit();
+        // DeliveryStarted deliveryStarted = new DeliveryStarted(this);
+        // deliveryStarted.publishAfterCommit();
     }
 
     public static DeliveryRepository repository() {
@@ -54,13 +54,17 @@ public class Delivery {
     }
 
     public static void cookingFinished(CookFinished cookFinished) {
-        /** Example 1:  new item 
+        /** Example 1:  new item */
         Delivery delivery = new Delivery();
+        delivery.setMenuId(cookFinished.getMenuId());
+        delivery.setCustomerId(cookFinished.getCustomerId());
+        delivery.setDeliveryStatus("Delivery wating.");
+
         repository().save(delivery);
 
         FoodPicked foodPicked = new FoodPicked(delivery);
         foodPicked.publishAfterCommit();
-        */
+      
 
         /** Example 2:  finding and process
         
