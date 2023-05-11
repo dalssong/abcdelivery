@@ -1,16 +1,11 @@
 ![image](https://github.com/dalssong/abcdelivery/assets/126850101/2896f1b1-7ff8-4801-b14f-eff10c111838)
 
 # 1.Event Storming Model
-```
 ![image](https://github.com/dalssong/abcdelivery/assets/126850101/cc065302-d4d6-431b-8825-62d72f4909cc)
-```
+
 # 2.Saga (Pub/Sub)
-```
-<img width="951" alt="image" src="https://github.com/dalssong/abcdelivery/assets/126850101/97a41f91-b4a5-471b-a8aa-e1cd5bbd8bee">
-```
-```
 ![image](https://github.com/dalssong/abcdelivery/assets/126850101/31878bb6-adfe-4295-80d2-1ad06bcd8813)
-```
+
 # 3.CQRS
 ```
 ![image](https://github.com/dalssong/abcdelivery/assets/126850101/5d1b644e-6ab3-490b-a5c7-d56051893f7f)
