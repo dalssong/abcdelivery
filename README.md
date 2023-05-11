@@ -1,3 +1,4 @@
+![image](https://github.com/dalssong/abcdelivery/assets/126850101/2896f1b1-7ff8-4801-b14f-eff10c111838)
 
 # 1.Event Storming Model
 ![image](https://github.com/dalssong/abcdelivery/assets/126850101/cc065302-d4d6-431b-8825-62d72f4909cc)
