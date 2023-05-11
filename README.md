@@ -131,24 +131,23 @@ mvn spring-boot:run
 ## Test by API
 - store
 ```
- http :8088/cookings id="id" storeName="storeName" menuId="menuId" menuName="menuName" qty="qty" menuPrice="menuPrice" deliveryStatus="deliveryStatus" 
+ http :8088/cookings orderId=1 storeName="K-Foods" menuId=1 menuName="menu1" qty=1 menuPrice=10000 userId=1234
 ```
 - order
 ```
- http :8088/orders id="id" userId="userId" storeName="storeName" menuName="menuName" orderStatus="orderStatus" menuPrice="menuPrice" 
+ http :8088/orders userId=1234 storeName="K-Foods" menuName="menu1" orderStatus="orderStatus:paid" menuPrice=10000
 ```
 - delivery
 ```
- http :8088/deliveries id="id" riderId="riderId" riderName="riderName" storeId="storeId" storeName="storeName" menuId="menuId" qty="qty" customerId="customerId" deliveryStatus="deliveryStatus" 
+ http :8088/deliveries riderId=4321 riderName="AAA" storeId=1 storeName="K-Foods" menuId=1 qty=1 customerId=1234
 ```
 - front-user
 ```
-```
-- front-rider
-```
+ http GET :8084/myPageCustomers/1234
 ```
 - front-store
 ```
+ http GET :8086/myPageShops/1
 ```
 
 
