@@ -9,6 +9,7 @@
 ![image](https://github.com/dalssong/abcdelivery/assets/126850101/5d1b644e-6ab3-490b-a5c7-d56051893f7f)
 
 # 4.Compensation/Correlation
+POST
 ```
 gitpod /workspace/abcdelivery (main) $  http :8088/orders userId=1234 storeName="korean-food" menuName="menu1" orderStatus="orderStatus:paid" menuPrice=10000
 
@@ -35,6 +36,73 @@ transfer-encoding: chunked
     "orderStatus": "orderStatus:paid",
     "storeName": "korean-food",
     "userId": 1234
+}
+
+
+gitpod /workspace/abcdelivery (main) $ 
+```
+
+GET
+```
+
+gitpod /workspace/abcdelivery (main) $ http GET :8088/orders
+HTTP/1.1 200 OK
+Content-Type: application/hal+json
+Date: Thu, 11 May 2023 02:13:21 GMT
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+transfer-encoding: chunked
+
+{
+    "_embedded": {
+        "orders": [
+            {
+                "_links": {
+                    "order": {
+                        "href": "http://localhost:8082/orders/1"
+                    },
+                    "self": {
+                        "href": "http://localhost:8082/orders/1"
+                    }
+                },
+                "menuName": "menu1",
+                "menuPrice": 10000,
+                "orderStatus": "orderStatus:paid",
+                "storeName": "korean-food",
+                "userId": 1234
+            },
+            {
+                "_links": {
+                    "order": {
+                        "href": "http://localhost:8082/orders/2"
+                    },
+                    "self": {
+                        "href": "http://localhost:8082/orders/2"
+                    }
+                },
+                "menuName": "menu2",
+                "menuPrice": 15000,
+                "orderStatus": "orderStatus:paid",
+                "storeName": "korean-food",
+                "userId": 1234
+            }
+        ]
+    },
+    "_links": {
+        "profile": {
+            "href": "http://localhost:8082/profile/orders"
+        },
+        "self": {
+            "href": "http://localhost:8082/orders"
+        }
+    },
+    "page": {
+        "number": 0,
+        "size": 20,
+        "totalElements": 2,
+        "totalPages": 1
+    }
 }
 
 
