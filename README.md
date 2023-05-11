@@ -1,9 +1,15 @@
-# 
 
-# Event Storming Model
+# 1.Event Storming Model
 ![image](https://github.com/dalssong/abcdelivery/assets/126850101/cc065302-d4d6-431b-8825-62d72f4909cc)
 
+# 2.Saga (Pub/Sub)
+![image](https://github.com/dalssong/abcdelivery/assets/126850101/76c7328c-deb3-4d1b-87bd-c8355d7e648e)
 
+# 3.CQRS
+
+# 4.Compensation/Correlation
+
+---------------------
 
 ## Model
 www.msaez.io/#/storming/abcdelivery-jsyang
