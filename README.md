@@ -4,8 +4,11 @@
 ![image](https://github.com/dalssong/abcdelivery/assets/126850101/cc065302-d4d6-431b-8825-62d72f4909cc)
 
 # 2.Saga (Pub/Sub)
+![image](https://github.com/dalssong/abcdelivery/assets/126850101/f8c2fd2a-cd9d-4522-87e2-121aedaaaa00)
 ![image](https://github.com/dalssong/abcdelivery/assets/126850101/31878bb6-adfe-4295-80d2-1ad06bcd8813)
 ![image](https://github.com/dalssong/abcdelivery/assets/126850101/9492ef5a-230b-4527-83e8-14bdf856e24e)
+![image](https://github.com/dalssong/abcdelivery/assets/126850101/baf1f106-4aa2-4ec1-af60-ba7943fd9250)
+![image](https://github.com/dalssong/abcdelivery/assets/126850101/46b2b5fa-8df6-4ab4-b22c-3571bf824cdd)
 
 # 3.CQRS
 ![image](https://github.com/dalssong/abcdelivery/assets/126850101/854a7428-b048-4a0e-aacf-99ad778878d8)
