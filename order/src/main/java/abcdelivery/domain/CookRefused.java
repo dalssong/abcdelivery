@@ -16,4 +16,7 @@ public class CookRefused extends AbstractEvent {
     private Integer qty;
     private Integer menuPrice;
     private String deliveryStatus;
+
+     // add
+     private Long orderId;
 }

@@ -70,9 +70,9 @@ public class Order {
 
         */
 
-        /** Example 2:  finding and process
+        /** Example 2:  finding and process */
         
-        repository().findById(foodDelivered.get???()).ifPresent(order->{
+        repository().findById(foodDelivered.getOrderId()).ifPresent(order->{
             
             order // do something
             repository().save(order);
