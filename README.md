@@ -5,6 +5,7 @@
 
 # 2.Saga (Pub/Sub)
 ![image](https://github.com/dalssong/abcdelivery/assets/126850101/31878bb6-adfe-4295-80d2-1ad06bcd8813)
+![image](https://github.com/dalssong/abcdelivery/assets/126850101/9492ef5a-230b-4527-83e8-14bdf856e24e)
 
 # 3.CQRS
 ![image](https://github.com/dalssong/abcdelivery/assets/126850101/854a7428-b048-4a0e-aacf-99ad778878d8)
