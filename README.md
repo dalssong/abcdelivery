@@ -8,7 +8,7 @@
 
 # 3.CQRS
 ```
-gitpod /workspace/abcdelivery (main) $ http GET :8084/myPageCustomers/1234
+gitpod /workspace/abcdelivery (main) $ http GET :8084/myPageCustomers/1
 ```
 ```
 2023-05-11 08:04:54.353  INFO [front-user,,,] 19139 --- [pool-5-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-front-user-3, groupId=front-user] Found no committed offset for partition abcdelivery-0
@@ -24,7 +24,7 @@ Hibernate:
         my_page_customer_table mypagecust0_ 
     where
         mypagecust0_.id=?
-2023-05-11 08:05:15.216 TRACE [front-user,a1550ae6d97112a5,a1550ae6d97112a5,true] 19139 --- [nio-8084-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1234]
+2023-05-11 08:05:15.216 TRACE [front-user,a1550ae6d97112a5,a1550ae6d97112a5,true] 19139 --- [nio-8084-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
 ```
 
 # 4.Compensation/Correlation
