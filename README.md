@@ -8,24 +8,23 @@
 
 # 3.CQRS
 ```
+gitpod /workspace/abcdelivery (main) $ http GET :8084/myPageCustomers/1234
+```
+```
+2023-05-11 08:04:54.353  INFO [front-user,,,] 19139 --- [pool-5-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-front-user-3, groupId=front-user] Found no committed offset for partition abcdelivery-0
 Hibernate: 
     select
-        order0_.id as id1_1_0_,
-        order0_.menu_name as menu_nam2_1_0_,
-        order0_.menu_price as menu_pri3_1_0_,
-        order0_.order_status as order_st4_1_0_,
-        order0_.store_name as store_na5_1_0_,
-        order0_.user_id as user_id6_1_0_ 
+        mypagecust0_.id as id1_0_0_,
+        mypagecust0_.menu_name as menu_nam2_0_0_,
+        mypagecust0_.menu_price as menu_pri3_0_0_,
+        mypagecust0_.order_status as order_st4_0_0_,
+        mypagecust0_.store_name as store_na5_0_0_,
+        mypagecust0_.user_id as user_id6_0_0_ 
     from
-        order_table order0_ 
+        my_page_customer_table mypagecust0_ 
     where
-        order0_.id=?
-2023-05-11 07:45:25.456 TRACE [order,0c665a666488c307,0c665a666488c307,true] 16933 --- [nio-8082-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
-2023-05-11 07:45:25.456 TRACE [order,0c665a666488c307,0c665a666488c307,true] 16933 --- [nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([menu_nam2_1_0_] : [VARCHAR]) - [menu1]
-2023-05-11 07:45:25.456 TRACE [order,0c665a666488c307,0c665a666488c307,true] 16933 --- [nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([menu_pri3_1_0_] : [INTEGER]) - [10000]
-2023-05-11 07:45:25.456 TRACE [order,0c665a666488c307,0c665a666488c307,true] 16933 --- [nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([order_st4_1_0_] : [VARCHAR]) - [orderStatus:paid]
-2023-05-11 07:45:25.456 TRACE [order,0c665a666488c307,0c665a666488c307,true] 16933 --- [nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([store_na5_1_0_] : [VARCHAR]) - [K-Foods]
-2023-05-11 07:45:25.456 TRACE [order,0c665a666488c307,0c665a666488c307,true] 16933 --- [nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([user_id6_1_0_] : [BIGINT]) - [1234]
+        mypagecust0_.id=?
+2023-05-11 08:05:15.216 TRACE [front-user,a1550ae6d97112a5,a1550ae6d97112a5,true] 19139 --- [nio-8084-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1234]
 ```
 
 # 4.Compensation/Correlation
